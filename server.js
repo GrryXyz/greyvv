@@ -50,6 +50,28 @@ form.append(
   { filename: "selfie.jpg", contentType: "image/jpeg" }
 );
 
+    form.append("payload_json", JSON.stringify({
+  username: "Pendaftaran MLBB",
+  embeds: [
+    {
+      title: "📥 Pendaftaran Squad MLBB",
+      color: 5793266,
+      fields: [
+        { name: "Nama", value: nama, inline: true },
+        { name: "Umur", value: umur, inline: true },
+        { name: "Gender", value: gender, inline: true },
+        { name: "Kota", value: kota, inline: true },
+        { name: "Nick ML", value: nickml },
+        { name: "TikTok", value: tiktok }
+      ],
+      image: { url: "attachment://selfie.jpg" },
+      thumbnail: { url: "attachment://ss_tiktok.jpg" },
+      timestamp: new Date()
+    }
+  ]
+}));
+
+
 
     await axios.post(WEBHOOK_URL, form, { headers: form.getHeaders() });
 
