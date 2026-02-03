@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pendaftaran Squad MLBB</title>
+<style>
+body{margin:0;font-family:Arial;background:linear-gradient(135deg,#020617,#0a3cff);
+display:flex;justify-content:center;align-items:center;min-height:100vh;padding:20px}
+.card{width:100%;max-width:420px;background:#020617;border-radius:16px;padding:24px;
+box-shadow:0 0 30px rgba(0,234,255,.35)}
+h2{text-align:center;color:#00eaff}
+label{color:#cbd5f5;font-size:13px;margin-top:12px;display:block}
+input,select,button{width:100%;margin-top:6px;padding:12px;border-radius:10px;
+border:1px solid #1e3a8a;background:#020617;color:white}
+button{margin-top:20px;background:linear-gradient(135deg,#00eaff,#2563eb);
+color:#020617;font-weight:bold;border:none}
+</style>
+</head>
+<body>
+<div class="card">
+<h2>🔥 Daftar Squad MLBB 🔥</h2>
+<form action="/daftar" method="POST" enctype="multipart/form-data">
+<label>Nama</label><input name="nama" required>
+<label>Umur</label><input type="number" name="umur" required>
+<label>Gender</label>
+<select name="gender" required>
+<option value="">Pilih</option>
+<option>Laki-laki</option>
+<option>Perempuan</option>
+</select>
+<label>Asal Kota</label><input name="kota" required>
+<label>Nick ML</label><input name="nickml" required>
+<label>Nama TikTok</label><input name="tiktok" required>
+<label>SS TikTok</label><input type="file" name="sstiktok" accept="image/*" required>
+<label>Foto Selfie</label><input type="file" name="selfie" accept="image/*" required>
+<button type="submit">DAFTAR</button>
+</form>
+</div>
+</body>
+</html>
