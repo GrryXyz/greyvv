@@ -38,8 +38,18 @@ app.post("/daftar", upload.fields([
       }]
     }));
 
-    form.append("files[0]", fs.createReadStream(ss.path));
-    form.append("files[1]", fs.createReadStream(sf.path));
+    form.append(
+  "files[0]",
+  fs.createReadStream(ss.path),
+  { filename: "ss_tiktok.jpg", contentType: "image/jpeg" }
+);
+
+form.append(
+  "files[1]",
+  fs.createReadStream(sf.path),
+  { filename: "selfie.jpg", contentType: "image/jpeg" }
+);
+
 
     await axios.post(WEBHOOK_URL, form, { headers: form.getHeaders() });
 
