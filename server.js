@@ -24,7 +24,7 @@ app.post("/daftar", upload.fields([
     form.append("payload_json", JSON.stringify({
       username: "Pendaftaran MLBB",
       embeds: [{
-        title: "📥 Pendaftaran Squad MLBB",
+        title: "📥 Pendaftaran NexusGy",
         color: 5793266,
         fields: [
           { name: "Nama", value: nama, inline: true },
@@ -55,7 +55,7 @@ form.append(
   username: "Pendaftaran MLBB",
   embeds: [
     {
-      title: "📥 Pendaftaran Squad MLBB",
+      title: "📥 Pendaftaran NexusGy",
       color: 5793266,
       fields: [
         { name: "Nama", value: nama, inline: true },
