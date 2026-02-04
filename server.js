@@ -78,7 +78,7 @@ form.append(
     fs.unlinkSync(ss.path);
     fs.unlinkSync(sf.path);
 
-    res.send("Berhasil daftar, cek Discord");
+    res.redirect("/success.html");
   } catch (e) {
     console.error(e);
     res.status(500).send("Gagal");
