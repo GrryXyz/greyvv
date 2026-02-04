@@ -16,7 +16,7 @@ app.post("/daftar", upload.fields([
   { name: "selfie", maxCount: 1 }
 ]), async (req, res) => {
   try {
-    const { nama, umur, gender, kota, nickml, tiktok } = req.body;
+    const { nama, umur, wa, gender, kota, nickml, tiktok } = req.body;
     const ss = req.files.sstiktok[0];
     const sf = req.files.selfie[0];
 
@@ -29,6 +29,7 @@ app.post("/daftar", upload.fields([
         fields: [
           { name: "Nama", value: nama, inline: true },
           { name: "Umur", value: umur, inline: true },
+          { name: "WhatsApp", value: `[Chat WA](https://wa.me/62${wa.substring(1)})`, inline: true },
           { name: "Gender", value: gender, inline: true },
           { name: "Kota", value: kota, inline: true },
           { name: "Nick ML", value: nickml },
@@ -59,6 +60,7 @@ form.append(
       fields: [
         { name: "Nama", value: nama, inline: true },
         { name: "Umur", value: umur, inline: true },
+        { name: "WhatsApp", value: `[Chat WA](https://wa.me/62${wa.substring(1)})`, inline: true },
         { name: "Gender", value: gender, inline: true },
         { name: "Kota", value: kota, inline: true },
         { name: "Nick ML", value: nickml },
